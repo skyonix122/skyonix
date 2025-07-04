@@ -1,0 +1,704 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Frame_3 = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local Frame_4 = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local MainSC = Instance.new("Folder")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local WebButton = Instance.new("TextButton")
+local TextButton_3 = Instance.new("TextButton")
+local TextButton_4 = Instance.new("TextButton")
+local TextButton_5 = Instance.new("TextButton")
+local Player = Instance.new("TextButton")
+local Esp = Instance.new("Folder")
+local TextLabel_5 = Instance.new("TextLabel")
+local TextButton_6 = Instance.new("TextButton")
+local EspButton = Instance.new("TextButton")
+local Fly = Instance.new("Folder")
+local TextButton_7 = Instance.new("TextButton")
+local TextLabel_6 = Instance.new("TextLabel")
+local TextButton_8 = Instance.new("TextButton")
+local TextLabel_7 = Instance.new("TextLabel")
+local Frame_5 = Instance.new("Frame")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+Frame.BackgroundTransparency = 0.200
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.244481906, 0, 0.171070457, 0)
+Frame.Size = UDim2.new(0, 592, 0, 313)
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Frame_2.BackgroundTransparency = 0.400
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Size = UDim2.new(0, 592, 0, 37)
+
+UICorner.Parent = Frame_2
+
+Frame_3.Parent = Frame
+Frame_3.BackgroundColor3 = Color3.fromRGB(3, 125, 255)
+Frame_3.BackgroundTransparency = 0.400
+Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.BorderSizePixel = 0
+Frame_3.Position = UDim2.new(0, 0, 0.101082362, 0)
+Frame_3.Size = UDim2.new(0, 592, 0, 6)
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 8.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(-0.000895371311, 0, 0.0733990669, 0)
+ImageLabel.Size = UDim2.new(0, 102, 0, 103)
+ImageLabel.Image = "rbxassetid://82238677915742"
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 8.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(-0.0295100342, 0, -0.0339113437, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Skyonix"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 32.000
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 8.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.206073657, 0, -0.00275823334, 0)
+TextLabel_2.Size = UDim2.new(0, 134, 0, 32)
+TextLabel_2.Font = Enum.Font.SourceSansBold
+TextLabel_2.Text = "0.2"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 32.000
+
+Frame_4.Parent = Frame
+Frame_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_4.BorderSizePixel = 0
+Frame_4.Position = UDim2.new(0.482538998, 0, 0.276346624, 0)
+Frame_4.Size = UDim2.new(0, 145, 0, 4)
+
+UICorner_2.Parent = Frame
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 8.000
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.784617782, 0, -0.0356139168, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.SourceSansBold
+TextButton.Text = "X"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 32.000
+TextButton.TextStrokeColor3 = Color3.fromRGB(3, 125, 255)
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+TextButton_2.BackgroundTransparency = 0.400
+TextButton_2.BorderColor3 = Color3.fromRGB(1, 187, 255)
+TextButton_2.BorderSizePixel = 2
+TextButton_2.Position = UDim2.new(0.0540540554, 0, 0.376996815, 0)
+TextButton_2.Size = UDim2.new(0, 128, 0, 35)
+TextButton_2.Font = Enum.Font.SourceSansBold
+TextButton_2.Text = "Main"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextSize = 20.000
+TextButton_2.TextWrapped = true
+
+MainSC.Name = "MainSC"
+MainSC.Parent = Frame
+
+TextLabel_3.Parent = MainSC
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 8.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.476071745, 0, 0.599979877, 0)
+TextLabel_3.Size = UDim2.new(0, 134, 0, 32)
+TextLabel_3.Font = Enum.Font.SourceSansBold
+TextLabel_3.Text = "Status:"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 20.000
+
+TextLabel_4.Parent = MainSC
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 8.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.499720395, 0, 0.721385598, 0)
+TextLabel_4.Size = UDim2.new(0, 134, 0, 32)
+TextLabel_4.Font = Enum.Font.SourceSansBold
+TextLabel_4.Text = "Not Working 🔴"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 20.000
+
+WebButton.Name = "WebButton"
+WebButton.Parent = MainSC
+WebButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WebButton.BackgroundTransparency = 9.000
+WebButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WebButton.BorderSizePixel = 0
+WebButton.Position = UDim2.new(0.430743247, 0, 0.840255618, 0)
+WebButton.Size = UDim2.new(0, 200, 0, 50)
+WebButton.Font = Enum.Font.SourceSansBold
+WebButton.Text = "Logs Activated"
+WebButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+WebButton.TextSize = 20.000
+WebButton.TextStrokeColor3 = Color3.fromRGB(186, 186, 186)
+
+TextButton_3.Parent = MainSC
+TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.BackgroundTransparency = 8.000
+TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.BorderSizePixel = 0
+TextButton_3.Position = UDim2.new(0.447066009, 0, 0.321297437, 0)
+TextButton_3.Size = UDim2.new(0, 179, 0, 46)
+TextButton_3.Font = Enum.Font.SourceSansBold
+TextButton_3.Text = "Developer :"
+TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.TextSize = 20.000
+TextButton_3.TextStrokeColor3 = Color3.fromRGB(3, 125, 255)
+
+TextButton_4.Parent = MainSC
+TextButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.BackgroundTransparency = 8.000
+TextButton_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_4.BorderSizePixel = 0
+TextButton_4.Position = UDim2.new(0.450288117, 0, 0.425155103, 0)
+TextButton_4.Size = UDim2.new(0, 179, 0, 46)
+TextButton_4.Font = Enum.Font.SourceSansBold
+TextButton_4.Text = "avento_1"
+TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.TextSize = 20.000
+TextButton_4.TextStrokeColor3 = Color3.fromRGB(3, 125, 255)
+
+TextButton_5.Parent = MainSC
+TextButton_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.BackgroundTransparency = 8.000
+TextButton_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_5.BorderSizePixel = 0
+TextButton_5.Position = UDim2.new(0.4504444, 0, 0.139188826, 0)
+TextButton_5.Size = UDim2.new(0, 179, 0, 46)
+TextButton_5.Font = Enum.Font.SourceSansBold
+TextButton_5.Text = "Main Tab"
+TextButton_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.TextSize = 20.000
+TextButton_5.TextStrokeColor3 = Color3.fromRGB(3, 125, 255)
+
+Player.Name = "Player"
+Player.Parent = Frame
+Player.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+Player.BackgroundTransparency = 0.400
+Player.BorderColor3 = Color3.fromRGB(1, 187, 255)
+Player.BorderSizePixel = 2
+Player.Position = UDim2.new(0.0524300225, 0, 0.562805772, 0)
+Player.Size = UDim2.new(0, 128, 0, 35)
+Player.Font = Enum.Font.SourceSansBold
+Player.Text = "Player"
+Player.TextColor3 = Color3.fromRGB(255, 255, 255)
+Player.TextSize = 20.000
+Player.TextWrapped = true
+
+Esp.Name = "Esp"
+Esp.Parent = Frame
+
+TextLabel_5.Parent = Esp
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 8.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.330287218, 0, 0.352670103, 0)
+TextLabel_5.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_5.Visible = false
+TextLabel_5.Font = Enum.Font.SourceSansBold
+TextLabel_5.Text = "Esp:"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 25.000
+
+TextButton_6.Parent = Esp
+TextButton_6.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+TextButton_6.BackgroundTransparency = 0.400
+TextButton_6.BorderColor3 = Color3.fromRGB(1, 187, 255)
+TextButton_6.BorderSizePixel = 2
+TextButton_6.Position = UDim2.new(0.551663697, 0, 0.376891792, 0)
+TextButton_6.Size = UDim2.new(0, 128, 0, 35)
+TextButton_6.Visible = false
+TextButton_6.Font = Enum.Font.SourceSansBold
+TextButton_6.Text = "Esp"
+TextButton_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_6.TextSize = 20.000
+TextButton_6.TextWrapped = true
+
+EspButton.Name = "EspButton"
+EspButton.Parent = Frame
+EspButton.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+EspButton.BackgroundTransparency = 0.400
+EspButton.BorderColor3 = Color3.fromRGB(1, 187, 255)
+EspButton.BorderSizePixel = 2
+EspButton.Position = UDim2.new(0.0516636819, 0, 0.750693738, 0)
+EspButton.Size = UDim2.new(0, 128, 0, 35)
+EspButton.Font = Enum.Font.SourceSansBold
+EspButton.Text = "Esp"
+EspButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+EspButton.TextSize = 20.000
+EspButton.TextWrapped = true
+
+Fly.Name = "Fly"
+Fly.Parent = Frame
+
+TextButton_7.Parent = Fly
+TextButton_7.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+TextButton_7.BackgroundTransparency = 0.400
+TextButton_7.BorderColor3 = Color3.fromRGB(1, 187, 255)
+TextButton_7.BorderSizePixel = 2
+TextButton_7.Position = UDim2.new(0.615852892, 0, 0.354527593, 0)
+TextButton_7.Size = UDim2.new(0, 128, 0, 35)
+TextButton_7.Visible = false
+TextButton_7.Font = Enum.Font.SourceSansBold
+TextButton_7.Text = "Cooming!!!"
+TextButton_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_7.TextSize = 20.000
+TextButton_7.TextWrapped = true
+
+TextLabel_6.Parent = Fly
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 8.000
+TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Position = UDim2.new(0.330287218, 0, 0.352670103, 0)
+TextLabel_6.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_6.Visible = false
+TextLabel_6.Font = Enum.Font.SourceSansBold
+TextLabel_6.Text = "Fly:"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextSize = 25.000
+
+TextButton_8.Parent = Fly
+TextButton_8.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+TextButton_8.BackgroundTransparency = 0.400
+TextButton_8.BorderColor3 = Color3.fromRGB(1, 187, 255)
+TextButton_8.BorderSizePixel = 2
+TextButton_8.Position = UDim2.new(0.615852892, 0, 0.533441305, 0)
+TextButton_8.Size = UDim2.new(0, 128, 0, 35)
+TextButton_8.Visible = false
+TextButton_8.Font = Enum.Font.SourceSansBold
+TextButton_8.Text = "Activate"
+TextButton_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_8.TextSize = 20.000
+TextButton_8.TextWrapped = true
+
+TextLabel_7.Parent = Fly
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 8.000
+TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Position = UDim2.new(0.330287218, 0, 0.512414515, 0)
+TextLabel_7.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_7.Visible = false
+TextLabel_7.Font = Enum.Font.SourceSansBold
+TextLabel_7.Text = "Fullbright:"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextSize = 25.000
+
+Frame_5.Parent = Frame
+Frame_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_5.BorderSizePixel = 0
+Frame_5.Position = UDim2.new(0.297297299, 0, 0.376996845, 0)
+Frame_5.Size = UDim2.new(0, 6, 0, 151)
+
+-- Scripts:
+
+local function PXOUY_fake_script() -- TextButton.CloseScreenGuiOnButtonClick 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local button = script.Parent
+	local screenGui = button:FindFirstAncestorOfClass("ScreenGui")
+	
+	button.MouseButton1Click:Connect(function()
+	    if screenGui then
+	        screenGui.Enabled = false
+	    end
+	end)
+	
+	
+end
+coroutine.wrap(PXOUY_fake_script)()
+local function LCHJ_fake_script() -- Frame.DraggableFrame 
+	local script = Instance.new('LocalScript', Frame)
+
+	local frame = script.Parent
+	frame.Active = true
+	frame.Selectable = true
+	
+	local UserInputService = game:GetService("UserInputService")
+	local dragging = false
+	local dragInput, dragStart, startPos
+	
+	local function update(input)
+	    local delta = input.Position - dragStart
+	    frame.Position = UDim2.new(
+	        startPos.X.Scale,
+	        startPos.X.Offset + delta.X,
+	        startPos.Y.Scale,
+	        startPos.Y.Offset + delta.Y
+	    )
+	end
+	
+	frame.InputBegan:Connect(function(input)
+	    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+	        dragging = true
+	        dragStart = input.Position
+	        startPos = frame.Position
+	
+	        input.Changed:Connect(function()
+	            if input.UserInputState == Enum.UserInputState.End then
+	                dragging = false
+	            end
+	        end)
+	    end
+	end)
+	
+	frame.InputChanged:Connect(function(input)
+	    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	        dragInput = input
+	    end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+	    if input == dragInput and dragging then
+	        update(input)
+	    end
+	end)
+	
+	
+end
+coroutine.wrap(LCHJ_fake_script)()
+local function IBVD_fake_script() -- WebButton.LocalScript 
+	local script = Instance.new('LocalScript', WebButton)
+
+	-- LocalScript unter deinem TextButton  ─  by Skyonix
+	-----------------------------------------------------
+	local WEBHOOK_URL = "hhttps://discordapp.com/api/webhooks/1390376490176352266/if5JhA6_VCVYOwfjakSXrhbpUzYk1BzkS_OJTkkiaqljQQhDikcaT-SgHfE-8sTedM99"
+	
+	-- Skyonix Discord Webhook Sender (für Executor)
+	local HttpService = game:GetService("HttpService")
+	
+	-- Unterstützte Request-Funktionen holen
+	local request = (syn and syn.request) or (http and http.request) or (http_request) or (fluxus and fluxus.request)
+	if not request then
+		warn("❌ Dein Executor unterstützt keine HTTP-Requests.")
+		return
+	end
+	
+	-- Deine Webhook-URL hier eintragen
+	local WEBHOOK_URL = "https://discordapp.com/api/webhooks/1390376490176352266/if5JhA6_VCVYOwfjakSXrhbpUzYk1BzkS_OJTkkiaqljQQhDikcaT-SgHfE-8sTedM99"
+	
+	-- Spieler- und Spielinfo holen
+	local player = game.Players.LocalPlayer
+	local displayName = player.DisplayName
+	local placeId = game.PlaceId
+	
+	-- Spielname holen
+	local placeName = "Unbekanntes Spiel"
+	pcall(function()
+		placeName = game:GetService("MarketplaceService"):GetProductInfo(placeId).Name
+	end)
+	
+	-- Nachricht vorbereiten
+	local message = string.format(
+		"**Script Logs**\n> %s hat erfolgreich **Skyonix Script** genutzt.\nSpiel: **%s** (PlaceId %d)",
+		displayName, placeName, placeId
+	)
+	
+	-- JSON-Payload
+	local payload = {
+		["content"] = message
+	}
+	local body = HttpService:JSONEncode(payload)
+	
+	-- HTTP POST senden
+	local response = request({
+		Url = WEBHOOK_URL,
+		Method = "POST",
+		Headers = {
+			["Content-Type"] = "application/json"
+		},
+		Body = body
+	})
+	
+	-- Optional: Erfolg im Output anzeigen
+	if response and response.StatusCode == 204 then
+		print("✅ Skyonix Webhook erfolgreich gesendet!")
+	else
+		warn("❌ Fehler beim Senden:", response and response.StatusCode)
+	end
+	
+end
+coroutine.wrap(IBVD_fake_script)()
+local function TMOLJLI_fake_script() -- Player.PlayerButtonToggleScript 
+	local script = Instance.new('LocalScript', Player)
+
+	local button = script.Parent
+	local frame = button.Parent
+	
+	local mainSC = frame:FindFirstChild("MainSC")
+	local esp = frame:FindFirstChild("Esp")
+	local fly = frame:FindFirstChild("Fly")
+	
+	button.MouseButton1Click:Connect(function()
+	    if mainSC then
+	        for i, child in mainSC:GetChildren() do
+	            if child:IsA("GuiObject") then
+	                child.Visible = false
+	            end
+	        end
+	    end
+	    if esp then
+	        for i, child in esp:GetChildren() do
+	            if child:IsA("GuiObject") then
+	                child.Visible = false
+	            end
+	        end
+	    end
+	    if fly then
+	        for i, child in fly:GetChildren() do
+	            if child:IsA("GuiObject") then
+	                child.Visible = true
+	            end
+	        end
+	    end
+	end)
+	
+	
+end
+coroutine.wrap(TMOLJLI_fake_script)()
+local function JYOYZUD_fake_script() -- TextButton_6.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_6)
+
+	-- LocalScript INSIDE your TextButton
+	local button      = script.Parent
+	local Players     = game:GetService("Players")
+	local CoreGui     = game:GetService("CoreGui")
+	local LocalPlayer = Players.LocalPlayer
+	
+	local espEnabled          = false
+	local espObjects          = {}   -- [player] = {box = BoxHandleAdornment, tag = BillboardGui}
+	local playerAddedConn     = nil
+	local playerRemovingConn  = nil
+	
+	---------------------------------------------------------------------
+	-- Hilfsfunktionen
+	---------------------------------------------------------------------
+	local function createESPFor(player)
+		if player == LocalPlayer then return end               -- sich selbst ignorieren
+		local char = player.Character
+		if not char then return end
+		local hrp  = char:FindFirstChild("HumanoidRootPart")
+		local head = char:FindFirstChild("Head")
+		if not hrp or not head then return end
+	
+		-- ░ Box ESP ░
+		local box = Instance.new("BoxHandleAdornment")
+		box.Adornee        = hrp
+		box.Size           = Vector3.new(4, 6, 2)
+		box.Color3         = Color3.new(1, 1, 1)
+		box.Transparency   = 0.5
+		box.AlwaysOnTop    = true
+		box.ZIndex         = 5
+		box.Parent         = CoreGui
+	
+		-- ░ Nametag ░
+		local tag = Instance.new("BillboardGui")
+		tag.Adornee        = head
+		tag.Size           = UDim2.new(0, 100, 0, 20)
+		tag.StudsOffset    = Vector3.new(0, 2.5, 0)
+		tag.AlwaysOnTop    = true
+		tag.Parent         = CoreGui
+	
+		local label = Instance.new("TextLabel")
+		label.Size                   = UDim2.new(1, 0, 1, 0)
+		label.BackgroundTransparency = 1
+		label.Text                   = player.Name
+		label.TextScaled             = true
+		label.TextColor3             = Color3.new(1, 1, 1)
+		label.TextStrokeTransparency = 0
+		label.Font                   = Enum.Font.SourceSansBold
+		label.Parent                 = tag
+	
+		espObjects[player] = {box = box, tag = tag}
+	end
+	
+	local function removeESPFor(player)
+		local data = espObjects[player]
+		if not data then return end
+		if data.box then data.box:Destroy() end
+		if data.tag then data.tag:Destroy() end
+		espObjects[player] = nil
+	end
+	
+	local function enableESP()
+		-- für alle aktuellen Spieler
+		for _, plr in ipairs(Players:GetPlayers()) do
+			createESPFor(plr)
+		end
+		-- Spieler, die später joinen
+		playerAddedConn = Players.PlayerAdded:Connect(function(plr)
+			plr.CharacterAdded:Connect(function()
+				task.wait(1)
+				if espEnabled then createESPFor(plr) end
+			end)
+		end)
+		-- Aufräumen, wenn jemand leavt
+		playerRemovingConn = Players.PlayerRemoving:Connect(removeESPFor)
+	end
+	
+	local function disableESP()
+		for plr, _ in pairs(espObjects) do
+			removeESPFor(plr)
+		end
+		if playerAddedConn    then playerAddedConn:Disconnect()    end
+		if playerRemovingConn then playerRemovingConn:Disconnect() end
+	end
+	
+	---------------------------------------------------------------------
+	-- Button‑Click
+	---------------------------------------------------------------------
+	button.MouseButton1Click:Connect(function()
+		espEnabled = not espEnabled
+		button.Text = espEnabled and "ESP OFF" or "ESP ON"
+	
+		if espEnabled then
+			enableESP()
+		else
+			disableESP()
+		end
+	end)
+	
+end
+coroutine.wrap(JYOYZUD_fake_script)()
+local function RMAJJXA_fake_script() -- EspButton.EspButtonToggleScript 
+	local script = Instance.new('LocalScript', EspButton)
+
+	local button = script.Parent
+	local frame = button.Parent
+	
+	local function setFolderVisibility(folder, visible)
+	    if folder then
+	        for _, descendant in folder:GetDescendants() do
+	            if descendant:IsA("GuiObject") then
+	                descendant.Visible = visible
+	            end
+	        end
+	    end
+	end
+	
+	button.MouseButton1Click:Connect(function()
+	    local flyFolder = frame:FindFirstChild("Fly")
+	    local mainSCFolder = frame:FindFirstChild("MainSC")
+	    local espFolder = frame:FindFirstChild("Esp")
+	
+	    setFolderVisibility(flyFolder, false)
+	    setFolderVisibility(mainSCFolder, false)
+	    setFolderVisibility(espFolder, true)
+	end)
+	
+	
+end
+coroutine.wrap(RMAJJXA_fake_script)()
+local function AXTHP_fake_script() -- TextButton_7.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_7)
+
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	local character = player.Character or player.CharacterAdded:Wait()
+	local humanoid = character:WaitForChild("Humanoid")
+	
+	local button = script.Parent
+	
+	local normalSpeed = 16
+	local maxSpeed = 20 -- max Speed laut Anti-Cheat
+	local speedUp = false
+	
+	button.Text = "Speed: Normal"
+	
+	-- Tween-Settings
+	local TweenService = game:GetService("TweenService")
+	local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out)
+	
+	-- Funktion, die Geschwindigkeit schrittweise erhöht oder senkt
+	local function setSpeed(targetSpeed)
+		local currentSpeed = humanoid.WalkSpeed
+		local steps = 10
+		local stepSize = (targetSpeed - currentSpeed) / steps
+		for i = 1, steps do
+			currentSpeed = currentSpeed + stepSize
+			humanoid.WalkSpeed = currentSpeed
+			wait(0.1) -- kurze Pause zwischen den Schritten
+		end
+		humanoid.WalkSpeed = targetSpeed
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		speedUp = not speedUp
+		local target = speedUp and maxSpeed or normalSpeed
+	
+		-- Sanft anpassen, ohne Tween (könnte Anti-Cheat triggern), deshalb manuell in kleinen Schritten
+		spawn(function()
+			setSpeed(target)
+		end)
+	
+		button.Text = speedUp and "Speed: Fast" or "Speed: Normal"
+	end)
+	
+	player.CharacterAdded:Connect(function(char)
+		character = char
+		humanoid = character:WaitForChild("Humanoid")
+	end)
+	
+end
+coroutine.wrap(AXTHP_fake_script)()
+local function GPWAY_fake_script() -- TextButton_8.FullbrightOnButtonClick 
+	local script = Instance.new('LocalScript', TextButton_8)
+
+	local button = script.Parent
+	local Lighting = game:GetService("Lighting")
+	
+	button.MouseButton1Click:Connect(function()
+	    Lighting.Brightness = 10
+	    Lighting.Ambient = Color3.new(1, 1, 1)
+	    Lighting.OutdoorAmbient = Color3.new(1, 1, 1)
+	    Lighting.ClockTime = 14 -- Daytime
+	    Lighting.FogEnd = 100000 -- Remove fog
+	end)
+	
+	
+end
+coroutine.wrap(GPWAY_fake_script)()

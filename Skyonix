@@ -1,18 +1,393 @@
+-- Gui to Lua
+-- Version: 3.2
 
--- Erstelle ein ScreenGui
-local screenGui = Instance.new("ScreenGui")
-screenGui.Name = "PrankGui"
-screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+-- Instances:
 
--- Erstelle den Button
-local button = Instance.new("TextButton")
-button.Size = UDim2.new(0, 200, 0, 50)
-button.Position = UDim2.new(0.5, -100, 0.5, -25)
-button.Text = "Start"
-button.Parent = screenGui
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local TextButton_2 = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local ImageLabel = Instance.new("ImageLabel")
+local Frame_2 = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
 
--- Wenn der Button geklickt wird
-button.MouseButton1Click:Connect(function()
-    -- Fake-Kick: Spiel schließen mit einer Nachricht
-    game.Players.LocalPlayer:Kick("Du wurdest von jeden spiel in roblox gebannt!!!")
-end)
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.608542502, 0, 0.452235758, 0)
+Frame.Size = UDim2.new(0, 217, 0, 284)
+
+UICorner.Parent = Frame
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 2.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(-0.156682029, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Aimbot Ui"
+TextLabel.TextColor3 = Color3.fromRGB(200, 34, 255)
+TextLabel.TextSize = 30.000
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.0737327188, 0, 0.838028193, 0)
+TextButton.Size = UDim2.new(0, 184, 0, 28)
+TextButton.Font = Enum.Font.SourceSansBold
+TextButton.Text = "Esp"
+TextButton.TextColor3 = Color3.fromRGB(200, 34, 255)
+TextButton.TextSize = 25.000
+
+UICorner_2.Parent = TextButton
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0.0737327188, 0, 0.693661988, 0)
+TextButton_2.Size = UDim2.new(0, 184, 0, 28)
+TextButton_2.Font = Enum.Font.SourceSansBold
+TextButton_2.Text = "Aimbot"
+TextButton_2.TextColor3 = Color3.fromRGB(200, 34, 255)
+TextButton_2.TextSize = 25.000
+
+UICorner_3.Parent = TextButton_2
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 2.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.56221199, 0, -0.0352112688, 0)
+ImageLabel.Size = UDim2.new(0, 78, 0, 76)
+ImageLabel.Image = "rbxassetid://81850987465517"
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.0414746553, 0, 0.140845075, 0)
+Frame_2.Size = UDim2.new(0, 113, 0, 2)
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 2.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.147465438, 0, 0.17605634, 0)
+TextLabel_2.Size = UDim2.new(0, 151, 0, 123)
+TextLabel_2.Font = Enum.Font.SourceSansBold
+TextLabel_2.Text = "This new Aimbot Ui does not support android or ios In future we add it to the Ui"
+TextLabel_2.TextColor3 = Color3.fromRGB(200, 34, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+-- Scripts:
+
+local function QJMRSB_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local button = script.Parent
+	local Players = game:GetService("Players")
+	local Workspace = game:GetService("Workspace")
+	
+	-- Funktion zum Erstellen eines Namensschildes
+	local function addNameBillboard(targetModel, displayName)
+		local head = targetModel:FindFirstChild("Head")
+		if head and not head:FindFirstChild("NameBillboard") then
+			local billboard = Instance.new("BillboardGui")
+			billboard.Name = "NameBillboard"
+			billboard.Adornee = head
+			billboard.Size = UDim2.new(0, 100, 0, 40)
+			billboard.StudsOffset = Vector3.new(0, 2.5, 0)
+			billboard.AlwaysOnTop = true
+	
+			local label = Instance.new("TextLabel")
+			label.Size = UDim2.new(1, 0, 1, 0)
+			label.BackgroundTransparency = 1
+			label.Text = displayName
+			label.TextColor3 = Color3.new(1, 1, 1)
+			label.TextStrokeColor3 = Color3.new(0, 0, 0)
+			label.TextStrokeTransparency = 0
+			label.Font = Enum.Font.SourceSansBold
+			label.TextScaled = true
+			label.Parent = billboard
+	
+			billboard.Parent = head
+		end
+	end
+	
+	-- Wenn Button gedrückt wird
+	button.MouseButton1Click:Connect(function()
+		-- 1. Spieler anzeigen
+		for _, player in ipairs(Players:GetPlayers()) do
+			if player.Character then
+				addNameBillboard(player.Character, player.Name)
+			end
+		end
+	
+		-- 2. NPCs anzeigen (alle Modelle im Workspace)
+		for _, model in ipairs(Workspace:GetChildren()) do
+			if model:IsA("Model") and model:FindFirstChild("Head") and not Players:GetPlayerFromCharacter(model) then
+				addNameBillboard(model, model.Name)
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(QJMRSB_fake_script)()
+local function SNRY_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	-- LocalScript unter deinem TextButton  ─  by Skyonix
+	-----------------------------------------------------
+	local WEBHOOK_URL = "https://discordapp.com/api/webhooks/1395146402354561106/cuy2HnPQ0n9EEjcP_suqwSjXy5EHgPCUayB47VC0rltw8NZUD-Z6zw5MeRKjLBV0jDO1"
+	
+	-- Skyonix Discord Webhook Sender (für Executor)
+	local HttpService = game:GetService("HttpService")
+	
+	-- Unterstützte Request-Funktionen holen
+	local request = (syn and syn.request) or (http and http.request) or (http_request) or (fluxus and fluxus.request)
+	if not request then
+		warn("❌ Dein Executor unterstützt keine HTTP-Requests.")
+		return
+	end
+	
+	-- Deine Webhook-URL hier eintragen
+	local WEBHOOK_URL = "https://discordapp.com/api/webhooks/1395146402354561106/cuy2HnPQ0n9EEjcP_suqwSjXy5EHgPCUayB47VC0rltw8NZUD-Z6zw5MeRKjLBV0jDO1"
+	
+	-- Spieler- und Spielinfo holen
+	local player = game.Players.LocalPlayer
+	local displayName = player.DisplayName
+	local placeId = game.PlaceId
+	
+	-- Spielname holen
+	local placeName = "Unbekanntes Spiel"
+	pcall(function()
+		placeName = game:GetService("MarketplaceService"):GetProductInfo(placeId).Name
+	end)
+	
+	-- Nachricht vorbereiten
+	local message = string.format(
+		"Script Logs\n> %s hat erfolgreich Skyonix Script genutzt.\nSpiel: %s (PlaceId %d)",
+		displayName, placeName, placeId
+	)
+	
+	-- JSON-Payload
+	local payload = {
+		["content"] = message
+	}
+	local body = HttpService:JSONEncode(payload)
+	
+	-- HTTP POST senden
+	local response = request({
+		Url = WEBHOOK_URL,
+		Method = "POST",
+		Headers = {
+			["Content-Type"] = "application/json"
+		},
+		Body = body
+	})
+	
+	-- Optional: Erfolg im Output anzeigen
+	if response and response.StatusCode == 204 then
+		print("✅ Skyonix Webhook erfolgreich gesendet!")
+	else
+		warn("❌ Fehler beim Senden:", response and response.StatusCode)
+	end
+end
+coroutine.wrap(SNRY_fake_script)()
+local function AVCOJD_fake_script() -- TextButton_2.AimbotToggleScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	local button = script.Parent
+	local UserInputService = game:GetService("UserInputService")
+	local Players = game:GetService("Players")
+	local LocalPlayer = Players.LocalPlayer
+	local Workspace = game:GetService("Workspace")
+	local RunService = game:GetService("RunService")
+	
+	local aimbotActive = false
+	local targetType = "Player" -- "Player" oder "Rig"
+	local aimbotConnection = nil
+	
+	-- Hilfsfunktion: Finde alle Spieler-Character-Modelle außer dem eigenen
+	local function getPlayerTargets()
+	    local targets = {}
+	    for i, player in Players:GetPlayers() do
+	        if player ~= LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+	            table.insert(targets, player.Character)
+	        end
+	    end
+	    return targets
+	end
+	
+	-- Hilfsfunktion: Finde alle Rigs (Models mit Humanoid, aber kein Spieler)
+	local function getRigTargets()
+	    local targets = {}
+	    for i, model in Workspace:GetChildren() do
+	        if model:IsA("Model") and model:FindFirstChild("Humanoid") and model:FindFirstChild("HumanoidRootPart") then
+	            -- Prüfe, ob das Model kein Spieler-Character ist
+	            local isPlayerChar = false
+	            for j, player in Players:GetPlayers() do
+	                if player.Character == model then
+	                    isPlayerChar = true
+	                    break
+	                end
+	            end
+	            if not isPlayerChar then
+	                table.insert(targets, model)
+	            end
+	        end
+	    end
+	    return targets
+	end
+	
+	-- Hilfsfunktion: Finde das nächste Ziel (einfach das erste in der Liste)
+	local function getCurrentTarget()
+	    if targetType == "Player" then
+	        local targets = getPlayerTargets()
+	        if #targets > 0 then
+	            return targets[1]
+	        end
+	    else
+	        local targets = getRigTargets()
+	        if #targets > 0 then
+	            return targets[1]
+	        end
+	    end
+	    return nil
+	end
+	
+	-- Aimbot-Logik: Kamera auf Ziel richten
+	local function aimAtTarget()
+	    local camera = Workspace.CurrentCamera
+	    local target = getCurrentTarget()
+	    if camera and target and target:FindFirstChild("HumanoidRootPart") then
+	        camera.CFrame = CFrame.new(camera.CFrame.Position, target.HumanoidRootPart.Position)
+	    end
+	end
+	
+	-- Taste "E" zum Wechseln zwischen Spieler und Rig (nur für Tastatur)
+	UserInputService.InputBegan:Connect(function(input, processed)
+	    if not aimbotActive then return end
+	    if processed then return end
+	    if input.KeyCode == Enum.KeyCode.E then
+	        if targetType == "Player" then
+	            targetType = "Rig"
+	        else
+	            targetType = "Player"
+	        end
+	        -- Button-Text aktualisieren
+	        button.Text = "Aimbot: AN (" .. targetType .. ")"
+	    end
+	end)
+	
+	-- Aimbot aktivieren/deaktivieren (gemeinsame Funktion für Button und Touch)
+	local function toggleAimbot()
+	    aimbotActive = not aimbotActive
+	    if aimbotActive then
+	        button.Text = "Aimbot: AN (" .. targetType .. ")"
+	        -- Starte Aimbot-Loop (Kamera folgt Ziel kontinuierlich)
+	        if aimbotConnection then
+	            aimbotConnection:Disconnect()
+	        end
+	        aimbotConnection = RunService.RenderStepped:Connect(function()
+	            aimAtTarget()
+	        end)
+	    else
+	        button.Text = "Aimbot: AUS"
+	        if aimbotConnection then
+	            aimbotConnection:Disconnect()
+	            aimbotConnection = nil
+	        end
+	    end
+	end
+	
+	-- Button-Click aktiviert/deaktiviert den Aimbot (PC)
+	button.MouseButton1Click:Connect(toggleAimbot)
+	
+	-- Mobile Support: TouchTap auf den Button
+	button.TouchTap:Connect(toggleAimbot)
+	
+	-- Initialer Button-Text
+	button.Text = "Aimbot: AUS"
+	
+	
+end
+coroutine.wrap(AVCOJD_fake_script)()
+local function RQOY_fake_script() -- Frame.SmoothDraggableFrame 
+	local script = Instance.new('LocalScript', Frame)
+
+	local frame = script.Parent
+	local TweenService = game:GetService("TweenService")
+	local UserInputService = game:GetService("UserInputService")
+	
+	local dragging = false
+	local dragInput, mousePos, framePos
+	local dragTween
+	
+	local function update(input)
+	    local delta = input.Position - mousePos
+	    local newPos = UDim2.new(
+	        framePos.X.Scale,
+	        framePos.X.Offset + delta.X,
+	        framePos.Y.Scale,
+	        framePos.Y.Offset + delta.Y
+	    )
+	    if dragTween then
+	        dragTween:Cancel()
+	    end
+	    dragTween = TweenService:Create(frame, TweenInfo.new(0.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = newPos})
+	    dragTween:Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+	    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+	        dragging = true
+	        mousePos = input.Position
+	        framePos = frame.Position
+	
+	        -- Visual effect: slightly scale up and make more transparent
+	        TweenService:Create(frame, TweenInfo.new(0.15), {BackgroundTransparency = 0.3, Size = frame.Size + UDim2.new(0,8,0,8)}):Play()
+	
+	        input.Changed:Connect(function()
+	            if input.UserInputState == Enum.UserInputState.End then
+	                dragging = false
+	                -- Restore visual effect
+	                TweenService:Create(frame, TweenInfo.new(0.15), {BackgroundTransparency = 0, Size = frame.Size - UDim2.new(0,8,0,8)}):Play()
+	            end
+	        end)
+	    end
+	end)
+	
+	frame.InputChanged:Connect(function(input)
+	    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	        dragInput = input
+	    end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+	    if dragging and input == dragInput then
+	        update(input)
+	    end
+	end)
+	
+	
+end
+coroutine.wrap(RQOY_fake_script)()

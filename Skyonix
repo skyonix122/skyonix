@@ -14,5 +14,5 @@ button.Parent = screenGui
 -- Wenn der Button geklickt wird
 button.MouseButton1Click:Connect(function()
     -- Fake-Kick: Spiel schließen mit einer Nachricht
-    game.Players.LocalPlayer:Kick("Du wurdest vom Script gebannt ")
+    game.Players.LocalPlayer:Kick("Du wurdest von jeden spiel in roblox gebannt!!!")
 end)
